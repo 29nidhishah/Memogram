@@ -1,0 +1,1588 @@
+/* Navbar ===================================*/
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 2px 2px 2px 2px var(--navShadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: var(--navBackground);
+    color: var(--navIconColor);
+    z-index: 100;
+}
+.navbarContainer .leftPart{
+    font-weight: 500;
+    cursor: pointer;
+}
+.navbarContainer .rightPart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 170px;
+}
+.navbarContainer .rightPart .navThemeIcon{
+    cursor: pointer;
+    transition: 1s all;
+}
+.navbarContainer .rightPart .addPost{
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: 1s all;
+    margin-left: 0px;
+}
+.navbarContainer .rightPart .homeIcon{
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: 1s all;
+}
+.homeIcon:hover, .addPost:hover, .navThemeIcon:hover{
+    transform: scale(1.2);
+}
+.navbarContainer .rightPart .signinBtn{
+    font-weight: 500;
+    color: rgb(90, 90, 90);
+    color: var(--navSignInColor);
+}
+
+.loginContainer{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.loginContainer h3{
+    font-size: 1.8rem;
+    color: var(--postDataColor);
+    margin-bottom: 50px;
+}
+.loginContainer h3 b{
+    color: #046FDB;
+    background: -webkit-linear-gradient(#feaea7, #F88379,  #7e342d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.2rem;
+}
+.loginContainer h5{
+    color: #046FDB;
+    font-size: .82rem;
+    cursor: pointer;
+}
+.loginBtn{
+    padding: 13px 26px;
+    color: var(--signInColor);
+    background: var(--editProfileButton);
+    border: 1px solid rgb(203, 203, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.icon{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.dp{
+    border-radius: 50%;
+}
+.homeContainer{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 80px;
+}
+.feeds{
+    width: 63%;
+}
+.myFeeds{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.account{
+    width: 28%;
+    position: fixed;
+    top: 92px;
+    right: 100px;
+    /* background-color: #fff; */
+    border-radius: 4px;
+    padding: 4px 10px;
+}
+.post{
+    /* border: 1px solid rgba(135, 135, 135, 0.658); */
+    border-radius: 4px;
+    padding: 5px 0px;
+    background: var(--postBackground);
+    margin: 10px 0px 30px;
+}
+.myPost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.myPost .myImageBox{
+    width: 240px;
+    height: 280px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.myPost .myImageBox .myPostImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.post .authorDetails{
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    position: relative;
+    color: var(--postDataColor);
+}
+.deleteIcon{
+    position: absolute;
+    right: 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.post .authorDetails .postDp{
+    border-radius: 50%;
+    cursor: pointer;
+}
+.post .authorDetails .authorNameEmail{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: .75rem;
+    margin-left: 10px;
+}
+.post .authorDetails .authorNameEmail div:first-child{
+    font-weight: 700;
+    cursor: pointer;
+}
+.post .authorDetails .authorNameEmail div:last-child{
+    color: var(--postAuthorDataColor);
+}
+.post .imageBox{
+    width: 100%;
+    min-height: 350px;
+    cursor: pointer;
+    position: relative;
+}
+.post .imageBox .postImage{
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}
+.post .postCaption{
+    padding: 3px 15px 10px;
+    font-size: .9rem;
+    color: var(--postDataColor);
+}
+.likeCommentShare{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px 12px;
+    color: var(--postDataColor);
+}
+.loveIcon{
+    font-size: 1.5rem;
+    margin: 0px 10px;
+    cursor: pointer;
+    transition: 1s transform;
+}
+.loveFillIcon{
+    font-size: 1.5rem;
+    margin: 0px 10px;
+    cursor: pointer;
+    color: 	#d60841;
+    transition: transform 1s;
+}
+.commentIcon{
+    font-size: 1.2rem;
+    margin: 0px 10px;
+    cursor: pointer;
+    transition: 1s all;
+}
+.whatsappIcon{
+    font-size: 1.2rem;
+    margin: 0px 10px;
+    cursor: pointer;
+    transition: 1s all;
+}
+.loveIcon:hover, .loveFillIcon:hover, .commentIcon:hover, .whatsappIcon:hover{
+    transform: scale(1.15);
+}
+.likeCounts{
+    font-size: .9rem;
+    padding: 5px 25px 10px;
+    display: flex;
+    align-items: center;
+    color: var(--postDataColor);
+}
+.likeCounts div:last-child{
+    margin-left: 10px;
+    font-size: .75rem;
+    color: var(--postAuthorDataColor);
+}
+.comment{
+    display: flex;
+    padding: 3px 25px;
+    justify-content: space-between;
+}
+.comment .commentLeft{
+    display: flex;
+}
+.comment .commentRight{
+    font-size: .73rem;
+    color: var(--postAuthorDataColor)
+}
+.commentForm button{
+    cursor: pointer;
+}
+.commentAuthorDP{
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.commentAuthorName{
+    font-weight: 600;
+    font-size: .9rem;
+    margin-top: 5px;
+    color: var(--postDataColor);
+    cursor: pointer;
+}
+.commentAuthorMessage{
+    color: var(--postAuthorDataColor);
+    margin-left: 10px;
+    font-size: .8rem;
+    margin-top: 5px;
+}
+.post .commentForm{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    margin-top: 8px;
+    justify-content: space-around;
+}
+.post .commentForm form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post .commentForm .emojiIcon{
+    font-size: 1.2rem;
+    position: relative;
+    top: 5px;
+}
+.commentInput{
+    padding: 0px 4px;
+    width: 520px;
+    margin-left: 15px;
+    outline: none;
+    margin-right: 20px;
+    z-index: 0;
+}
+.post .commentForm button{
+    background-color: var(--commentButton);
+    border: 0px;
+    color: var(--commentButtonColor);
+    font-weight: 600;
+}
+.post .commentForm button:disabled{
+    color: #6f7174;
+}
+/* Account Details =========================== */
+.accountDp{
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.accountProfile{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+}
+.accountProfile h3{
+    font-size: .85rem;
+    margin: 0px;
+    color: var(--postDataColor);
+}
+.accountProfile h6{
+    margin: 0px;
+    font-size: .7rem;
+    color: rgb(150, 150, 150);
+}
+.accountData{
+
+}
+.signInButton{
+    display: inline-block;
+    padding: 6px 25px;
+    font-size: .9rem;
+    background-color: rgb(255, 189, 165);
+    color: rgb(117, 0, 0);
+    font-weight: 600;
+    border-radius: 4px;
+}
+/* modal -------------------------------- */
+.modal{
+    width: 400px;
+    height: 385px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--modalBackground);
+    /* border: 1px solid rgb(156, 156, 156); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 10px;
+}
+.modal button{
+    padding: 8px 20px;
+    background-color: #3388dd;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.modal input[type="text"]{
+    padding: 6px 20px;
+    font-size: .85rem;
+    border: 0px;
+    outline: none;
+    position: relative;
+    top: 10px;
+    width: 300px;
+    text-align: center;
+    background: var(--modalBackground);
+    color: var(--postDataColor);
+}
+.modal button:disabled{
+    background-color: #6f7174;
+}
+.postEditModal{
+    width: 320px;
+    height: 210px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--modalBackground);
+    /* border: 1px solid rgb(156, 156, 156); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    color: var(--postDataColor);
+}
+.postModalEditList li{
+    list-style: none;
+    font-size: .86rem;
+    padding: 10px 80px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.postModalEditList li:hover{
+    background-color: var(--dropdownHoverBackground);
+}
+.postModalEditList .modalDeleteBtn{
+    color: #EE4B2B;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+
+.uploadedImage{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 3px;
+    min-height: 200px;
+    object-fit: cover;
+}
+.uploadedImageBox{
+    width: 350px;
+    min-height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageIcon{
+    cursor: pointer;
+}
+.imgError{
+    color: rgb(201, 0, 0);
+    font-size: .74rem;
+    position: relative;
+    margin: 0px;
+    top: -15px;
+    height: 20px;
+}
+.imgError2{
+    color: rgb(201, 0, 0);
+    font-size: .7rem;
+    position: relative;
+    margin: 0px;
+    top: 28px;
+    height: 20px;
+}
+
+/* Progress ------------------------------------------ */
+.progressContainer{
+    border: 1px solid rgb(197, 197, 197);
+    width: 250px;
+    border-radius: 3px;
+    position: relative;
+    top: 15px;
+}
+.progressBar{
+    height: 8px;
+    background-color: #14A44D;
+    border-radius: 3px;
+    /* border: 1px solid red; */
+}
+@media (max-width: 1245px){
+    .commentInput{
+        padding: 0px 4px;
+        width: 420px;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1000px){
+    .homeContainer{
+        flex-direction: column;
+    }
+    .account{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 220px auto;
+        height: 185px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 578px;
+    }
+    .searchBarContainer{
+        width: 578px;
+    }
+    .searchBarContainer input{
+        padding: 6px 20px;
+        width: 510px !important;
+    }
+    .accountDetailsContainer{
+        width: 578px;
+    }
+    .searchIcon{
+        font-size: 1.8rem;
+    }
+    .feeds{
+        margin-top: 155px;
+        width: 600px;
+    }
+    .commentInput{
+        padding: 0px 4px;
+        width: 470px;
+        margin-left: 0px;
+    }
+    .deleteMarginTop{
+        margin-top: -100px;
+    }
+}
+@media (max-width: 625px){
+    .searchBarContainer{
+        width: 420px;
+    }
+    .searchBarContainer input{
+        padding: 6px 20px;
+        width: 510px !important;
+    }
+    .accountDetailsContainer{
+        width: 420px;
+    }
+    .account{
+        width: 420px;
+    }
+    .feeds{
+        margin-top: 155px;
+        width: 400px;
+    }
+    .commentInput{
+        padding: 0px 3px;
+        width: 300px;
+        margin-left: 0px;
+    }
+    .post{
+        width: 400px;
+    }
+    .post .imageBox{
+        width: 100%;
+        min-height: 230px;
+    }
+}
+@media(max-width:440px){
+    .account, .accountDetailsContainer, .searchBarContainer{
+        width: 360px;
+    }
+}
+@media (max-width: 415px){
+    .navbarContainer .rightPart{
+        width: 150px;
+    }
+    .searchBarContainer{
+        width: 360px;
+    }
+    .searchBarContainer input{
+        padding: 6px 20px;
+        width: 240px !important;
+    }
+    .accountDetailsContainer{
+        width: 360px;
+        margin-top: 50px;
+    }
+    .searchIcon{
+        font-size: 1.2rem;
+    }
+    
+    .account{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 240px auto;
+        height: 85px;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .feeds{
+        margin-top: 150px;
+        width: 350px;
+    }
+    .commentInput{
+        padding: 0px 3px;
+        width: 255px;
+        margin-left: 0px;
+    }
+    .post .imageBox{
+        width: 100%;
+        min-height: 200px;
+    }
+    .post{
+        width: 350px;
+    }
+    .commentAuthorDP{
+        border-radius: 50%;
+        margin-right: 10px;
+        height: 30px;
+        width: 30px;
+    }
+    .commentAuthorName{
+        font-weight: 600;
+        font-size: .65rem;
+        margin-top: 5px;
+    }
+    .commentAuthorMessage{ 
+        margin-left: 10px;
+        font-size: .6rem;
+        margin-top: 5px;
+    }
+    .comment .commentRight{
+        font-size: .53rem;
+        position: relative;
+        top: 5px;
+    }
+    .modal{
+        width: 340px;
+        height: 360px;
+    }
+    .uploadedImageBox{
+        width: 300px;
+        height: 230px;
+    }
+    .uploadedImage{
+        width: 100%;
+        cursor: pointer;
+        height: 230px;
+        border-radius: 3px;
+    }
+}
+
+/* /post/[postid] page css -----------*/
+.postContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 80px;
+}
+
+.errorBox{
+    display: flex;
+    justify-content: center;
+}
+.error{
+    text-align: center;
+    background-color: #F67A7A;
+    color: white;
+    padding: 40px;
+    width: 360px;
+    border-radius: 6px;
+}
+
+
+/* Profile Page ------------------------------------------ */
+.profilePage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accountBackground);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+.profileLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profileLeft .profileUsername{
+    font-size: 1.1rem;
+    margin: 10px 0px;
+    color: var(--postDataColor);
+}
+.profileRight{
+    width: 500px;
+    height: 246px;
+    padding: 30px 0px;
+}
+.profileDp{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.postFollowerFollowing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.postFollowerFollowingData{
+    margin: 2px 20px;
+}
+.profileDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileData{
+    margin-top: 20px;
+}
+.profileDetails .profileUserNameData{
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: .9rem;
+    color: var(--postDataColor);
+}
+.profileDetails .profileUserBio{
+    font-size: .85rem;
+    color: var(--postAuthorDataColor);
+}
+.myPostContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+}
+.myPostContainer .myPostHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--myPostHeading);
+    margin-top: 10px;
+}
+.myPostContainer .myPostHeading h4{
+    margin-left: 10px;
+}
+
+@media(max-width: 815px){
+    .profileRight{
+        width: 400px;
+        height: 246px;
+        padding: 30px 0px;
+    }
+    .profileDp{
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+}
+@media(max-width: 715px){
+    .profileRight{
+        width: 330px;
+        height: 246px;
+        padding: 30px 0px;
+    }
+    .profileDp{
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+    }
+}
+@media(max-width: 600px){
+    .profileRight{
+        width: 280px;
+        height: 246px;
+        padding: 50px 20px;
+    }
+    .profileDp{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+    .profileContainer{
+        padding: 20px 30px;
+    }
+    .profileLeft .profileUsername{
+        font-size: .9rem;
+        margin: 10px 0px;
+    }
+}
+@media(max-width: 495px){
+    .profileContainer{
+        flex-direction: column;
+    }
+    .profileRight{
+        width: 260px;
+        height: 180px;
+        padding: 50px 20px;
+    }
+    .profileDp{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+    .profileContainer{
+        padding: 20px 30px;
+    }
+    .profileLeft .profileUsername{
+        font-size: .9rem;
+        margin: 10px 0px;
+    }
+    .postFollowerFollowing{
+        margin-bottom: 10px;
+        margin-top: -5px;
+    }
+    .editProfile{
+        margin-top: -40px;
+        margin-bottom: 50px;
+    }
+}
+.editProfile{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.editProfileBtn{
+    padding: 7px 12px;
+    border: 1px solid rgb(165, 165, 165);
+    display: inline;
+    font-size: .76rem;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--editProfileButton);
+
+}
+
+/* myPost ------------------------------- */
+.myLikeCommentCaption{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+}
+.myPost:hover .myLikeCommentCaption{
+    opacity: 1;
+}
+.myLikeCommentCaption .myLikeCommentCounts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myLikeCommentCaption .myLikeCommentCounts div{
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myLikeCommentCaption .myCaption{
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    font-size: .85rem;
+    padding: 2px 4px;
+    width: 220px;
+}
+.myPostLove{
+    font-size: 1.2rem;
+}
+.myPostComment{
+    font-size: 1rem;
+}
+.myPostFullscreenImage{
+    min-height: 300px;
+    max-height: 350px;
+    max-width: 500px;
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+
+}
+.postFullscreenModal{
+    width: 600px;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--modalBackground);
+    /* border: 1px solid rgb(156, 156, 156); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    color: var(--postDataColor);
+}
+.myPostTextData{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.myPostTextData .myPostFullscreenCaption{
+    text-align: left;
+    font-size: .88rem;
+    padding: 0px 6px;
+}
+.myPostTextData .myPostFullscreenCommentCounts{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.myPostTextData .myPostFullscreenCommentCounts div{
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myPostFullscreenCommentCounts .myPostLove{
+    margin-right: -10px;
+}
+.myPostFullscreenCommentCounts .myPostComment{
+    margin-right: -8px;
+}
+.myPostBottomPart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+.viewPost{
+    font-weight: 700;
+    color: var(--viewProfileButton);
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.storyFullscreenModal{
+    width: 600px;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--modalBackground);
+    /* border: 1px solid rgb(156, 156, 156); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+    border-radius: 10px;
+    padding: 15px 10px 0px;
+    text-align: center;
+    color: var(--postDataColor);
+}
+
+
+@media(max-width: 815px){
+    .myPost .myImageBox{
+        width: 200px;
+        height: 250px;
+    }
+}
+@media(max-width: 715px){
+    .myPost .myImageBox{
+        width: 180px;
+        height: 230px;
+    }
+}
+@media(max-width: 600px){
+    .myPost .myImageBox{
+        width: 145px;
+        height: 200px;
+        cursor: pointer;
+        border-radius: 12px;
+    }
+}
+@media(max-width: 550px){
+    .myPost .myImageBox{
+        width: 205px;
+        height: 220px;
+        cursor: pointer;
+        border-radius: 12px;
+    }
+    .myFeeds{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0px;
+        margin: 0px;
+    }
+}
+@media(max-width: 470px){
+    .myPost .myImageBox{
+        width: 150px;
+        height: 200px;
+        cursor: pointer;
+        border-radius: 12px;
+    }
+}
+@media(max-width: 395px){
+    .myPost .myImageBox{
+        width: 125px;
+        height: 172px;
+        cursor: pointer;
+        border-radius: 12px;
+    }
+}
+@media (max-width: 655px){
+    .myPostFullscreenImage{
+        min-height: 280px;
+        max-height: 350px;
+        max-width: 400px;
+    
+    }
+    .postFullscreenModal, .storyFullscreenModal{
+        width: 480px;
+        height: 450px;
+    }
+}
+@media (max-width: 515px){
+    .myPostFullscreenImage{
+        min-height: 270px;
+        max-height: 350px;
+        max-width: 330px;
+    }
+    .postFullscreenModal, .storyFullscreenModal{
+        width: 420px;
+        height: 450px;
+    }
+}
+@media (max-width: 440px){
+    .myPostFullscreenImage{
+        min-height: 260px;
+        max-height: 340px;
+        max-width: 300px;
+    }
+    .postFullscreenModal{
+        width: 360px;
+        height: 440px;
+    }
+    .storyFullscreenModal{
+        height: 100%;
+        width: 100%;
+    }
+}
+@media (max-width: 385px){
+    .myPostFullscreenImage{
+        min-height: 260px;
+        max-height: 320px;
+        max-width: 280px;
+    }
+    .postFullscreenModal{
+        width: 325px;
+        height: 425px;
+    }
+    .storyFullscreenModal{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* editProfile modal ------------------------------ */
+.editProfileModal{
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--modalBackground);
+    /* border: 1px solid rgb(156, 156, 156); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-align: center;
+}
+.editProfileImageBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.editProfileDp{
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+}
+.editProfileDiv h4{
+    color: var(--postDataColor);
+}
+.editProgress{
+    margin-top: -30px;
+}
+.editProfileModal button{
+    padding: 8px 20px;
+    background-color: #3388dd;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 60px;
+}
+.editProfileModal input[type="text"]{
+    padding: 6px 20px;
+    font-size: .85rem;
+    border: 0px;
+    outline: none;
+    position: relative;
+    top: 33px;
+    width: 200px;
+    text-align: center;
+    background: var(--modalBackground);
+    color: var(--postDataColor);
+}
+.editProfileModal button:disabled{
+    background-color: #6f7174;
+}
+
+/* Dropdown */
+.dropdownContent {
+    position: absolute;
+    background-color: var(--dropdownBackground);
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 20px;
+    top: 90px;
+}  
+.dropdownContent a {
+    color: var(--dropdownColor);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    font-size: .84rem;
+    align-items: center;
+}
+.dropdownContent div {
+    color: var(--dropdownColor);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    font-size: .84rem;
+    align-items: center;
+}
+.dropdownContent div:hover {
+    background-color: var(--dropdownHoverBackground)
+}
+.userDp{
+    cursor: pointer;
+}
+.dropdownIcons{
+    font-size: 1.1rem;
+    color: var(--dropdownIcons);
+    margin-right: 8px;
+}
+.dropdownIcons2{
+    font-size: 1.1rem;
+    color: var(--dropdownIcons2);
+    transition: 1s all;
+    margin-top: 6px;
+}
+.profileNotFound{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--modalBackground);
+    width: 570px;
+    align-items: center;
+    border-radius: 12px;
+    padding: 30px 20px;
+    margin-top: 20px;
+}
+.profileNotFoundPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileErrorImage{
+    height: 250px;
+    width: 250px;
+}
+.profileError{
+    font-size: .9rem;
+    margin-left: 15px;
+    margin-top: 40px;
+}
+.profileError h2{
+    margin-bottom: 0px;
+    color: var(--postDataColor);
+}
+.profileError h5{
+    margin-top: 6px;
+    color: rgb(155, 155, 155);
+}
+@media (max-width: 600px){
+    .profileNotFound .error{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 495px){
+    .profileNotFound .error{
+        font-size: 1rem;
+        margin-top: -20px;
+    }
+}
+@media(max-width: 600px){
+    .profileErrorImage{
+        height: 200px;
+        width: 240px;
+    }
+    .profileError{
+        font-size: .9rem;
+        margin-left: 5px;
+        margin-top: 0px;
+        text-align: center;
+    }
+    
+    .profileNotFound{
+        width: 400px;
+        flex-direction: column;
+    }
+}
+@media(max-width: 420px){
+    .profileErrorImage{
+        height: 200px;
+        width: 240px;
+    }
+    .profileError{
+        font-size: .8rem;
+        margin-left: 5px;
+        margin-top: 0px;
+        text-align: center;
+    }
+    
+    .profileNotFound{
+        width: 340px;
+        flex-direction: column;
+    }
+}
+
+.likeText{
+    cursor: pointer;
+}
+.likeModal{
+    width: 320px;
+    height: 210px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--modalBackground);
+    /* border: 1px solid rgb(156, 156, 156); */
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
+.likeHeading{
+    margin: 0px;
+    padding: 6px 0px 7px;
+    border-bottom: 1px solid rgb(187, 187, 187);
+    margin-bottom: 5px;
+    font-size: .9rem;
+    color: var(--postDataColor);
+}
+.likeList{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+/* Track */
+.likeList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    margin-bottom: 10px;
+}
+/* Handle */
+.likeList::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.likeUserdata{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+}
+.likeUserdata div{
+    margin-right: 6px;
+    font-size: .85rem;
+    width: 200px;
+    text-align: left;
+    padding-left: 6px;
+    color: var(--postDataColor);
+}
+.likeUserdata button{
+    font-size: .7rem;
+    border: 0px;
+    background-color: var(--modalBackground);
+    color: var(--viewProfileButton);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.accountDetailsContainer{
+    background-color: var(--accountBackground);
+    border-radius: 4px;
+}
+.searchBarContainer{
+    background-color: var(--accountBackground);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 15px 30px;
+    /* position: relative; */
+}
+.searchBarContainer input{
+    padding: 6px 20px;
+    width: 220px;
+    font-size: .75rem;
+    outline: none;
+    margin-right: 9px;
+}
+.searchIcon{
+    /* position: absolute; */
+    /* left: 38px;
+    top: 22px; */
+    cursor: pointer;
+    color: var(--postDataColor);
+}
+.searchIcon:active{
+    transform: scale(.96);
+}
+@media(max-width: 1040px){
+    .searchBarContainer input{
+        padding: 6px 20px;
+        width: 180px;
+        font-size: .75rem;
+        outline: none;
+        margin-right: 9px;
+    }
+}
+
+/* Story css ---------------------------------------- */
+.storyContainer{
+    width: 700px;
+    padding: 15px 15px 5px;
+    position: relative;
+    left: 80px;
+    background-color: var(--accountBackground);
+    border-radius: 5px;
+    height: 135px;
+}
+.feeds{
+    width: 700px;
+}
+.noStories{
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: rgb(180, 170, 170);
+    font-weight: 600;
+}
+.storyBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-direction: column;
+    z-index: 10;    
+}
+.storyAuthor{
+    font-size: .8rem;
+    margin-top: 4px;
+    color: var(--postDataColor);
+}
+.storyImage{
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    padding: 1.5px;
+    border: 2px solid rgb(255, 101, 101);
+    position: relative;
+    z-index: 10;
+}
+.storyAuthorDp{
+    border-radius: 50%;
+    position: absolute;
+    top: 16px;
+    left: 45px;
+    height: 40px;
+    width: 40px;
+}
+.storyAuthorName{
+    position: absolute;
+    top: 26px;
+    left: 94px;
+    font-size: .8rem;
+    font-weight: 500;
+}
+.storyTimespan{
+    position: absolute;
+    top: 28px;
+    left: 230px;
+    color: var(--storyTimeColor);
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+.addStoryIcon{
+    color: #2d8adb;
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    z-index: 10;
+    opacity: 1;
+    font-size: 1.1rem;
+}
+.swiper-container {
+    width: 480px;
+}
+
+@media (max-width: 655px){
+    .storyAuthorDp{
+        top: 16px;
+        left: 15px;
+    }
+    .storyAuthorName{
+        top: 26px;
+        left: 68px;
+    }
+    .storyTimespan{
+        top: 28px;
+        left: 210px;
+    }
+}  
+@media screen and (min-width: 640px) {
+    .swiper-container {
+      width: 640px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .swiper-container {
+      width: 768px;
+    }
+}
+@media(max-width: 1230px){
+    .storyContainer, .feeds{
+        width: 600px;
+    }
+    .myStoryDiv{
+        margin-left: 9px;
+    }
+}
+@media(max-width: 1100px){
+    .storyContainer, .feeds{
+        width: 540px;
+    }
+}
+@media(max-width: 1000px){
+    .storyContainer{
+        width: 580px;
+        padding: 15px 15px 5px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 10px auto 0px;
+        /* position: absolute; */
+    }
+    .feeds{
+        width: 580px;
+    }
+}
+@media(max-width: 625px){
+    .storyContainer{
+        width: 420px;
+        padding: 15px 15px 5px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 10px auto 0px;
+        /* position: absolute; */
+    }
+    .feeds{
+        width: 420px;
+    }
+    .post{
+        width: 420px;
+    }
+    
+}
+@media(max-width: 440px){
+    .storyContainer{
+        width: 360px;
+        padding: 15px 15px 5px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 10px auto 0px;
+        /* position: absolute; */
+    }
+    .feeds{
+        width: 360px;
+    }
+    .post{
+        width: 360px;
+    }
+    
+}
+.storyDeleteIcon{
+    font-size: 1.3rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: var(--storyDeleteIconColor);
+    cursor: pointer;
+}
+/* story fullscreen image ----------- */
+.storyFullscreenImage{
+    min-height: 300px;
+    max-height: 350px;
+    max-width: 500px;
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.storyFullscreenBackground{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    filter: blur(50px);
+    opacity: 0.58;
+}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&display=swap');
+.storyCaption{
+    z-index: 2;
+    position: relative;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: 600;
+    margin-top: 5px;
+    color: var(--storyCaption);
+}
+@media (max-width: 440px){
+    .storyFullscreenImage{
+        min-height: 600px;
+        max-height: 700px;
+    }
+    .storyFullscreenModal{
+        border-radius: 0px;
+    }
+}
